@@ -7,7 +7,7 @@ This repository contains the code for the paper: "Online vs. Offline Adaptive Do
 
 <img src="https://www.gabrieletiboni.com/assets/online_vs_offline_adr_compact.png" style="width: 90%; max-width: 900px;" />
 
-Our release is **in progress**, you can track it below:
+Our release is **under construction**, you can track its progress below:
 
 - [ ] MuJoCo Environments
 - [ ] Methods
