@@ -8,6 +8,7 @@ This repository contains the code for the paper: "Online vs. Offline Adaptive Do
 ![online_vs_offline_adr](https://www.gabrieletiboni.com/assets/online_vs_offline_adr.png)
 
 
+
 Our release is **in progress**, you can track it below:
 
 - [ ] MuJoCo Environments
@@ -24,6 +25,6 @@ If you use this repository, please consider citing
             author={Tiboni, Gabriele and Arndt, Karol and Averta, Giuseppe and Kyrki, Ville and Tommasi, Tatiana},
             year={2022},
             primaryClass={cs.RO},
-            publisher = {arXiv},
+            publisher={arXiv},
             doi={10.48550/ARXIV.2206.14661}
         }
