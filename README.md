@@ -17,12 +17,13 @@ Our release is **in progress**, you can track it below:
 
 ## Cite us
 If you use this repository, please consider citing
-        
-        @misc{tiboniadrbenchmark,
-            title={Online vs. Offline Adaptive Domain Randomization Benchmark},
-            author={Tiboni, Gabriele and Arndt, Karol and Averta, Giuseppe and Kyrki, Ville and Tommasi, Tatiana},
-            year={2022},
-            primaryClass={cs.RO},
-            publisher={arXiv},
-            doi={10.48550/ARXIV.2206.14661}
-        }
+```
+@misc{tiboniadrbenchmark,
+    title={Online vs. Offline Adaptive Domain Randomization Benchmark},
+    author={Tiboni, Gabriele and Arndt, Karol and Averta, Giuseppe and Kyrki, Ville and Tommasi, Tatiana},
+    year={2022},
+    primaryClass={cs.RO},
+    publisher={arXiv},
+    doi={10.48550/ARXIV.2206.14661}
+}
+```

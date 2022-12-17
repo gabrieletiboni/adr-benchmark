@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <title>Online vs. Offline Adaptive Domain Randomization Benchmark</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"  />
+    <link rel="stylesheet" type="text/css" href="assets/css/animatedBackground.css"  />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      
+      <div id="animContainer"></div>
+      <div id="headerBackground"></div>
+
+      <div id="elevatedContent">
+        <h1>Online vs. Offline Adaptive Domain Randomization Benchmark</h1>
+
+        <div id="linksContainer">
+          <a href="https://arxiv.org/abs/2206.14661" target="_blank" class="iconLink">Paper <img src="assets/img/paper_icon2_64px.png"/></a>
+          <a href="https://github.com/gabrieletiboni/adr-benchmark" target="_blank" class="iconLink">Code <img src="assets/img/github_logo_light_64px.png"/></a>
+          <a href="#contributionsSection" class="comingSoon">Contributions</a>
+          <a href="#findingsSection" class="comingSoon">Findings</a>
+        </div>
+      </div>
+
+      <div id="videoContainer">
+        <div>
+          <video controls>
+            <source src="assets/video/adr_benchmark_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </header>
+
+    <section id="main">
+      <div id="intro">
+        <p>
+          <strong><em>Abstract</em></strong><br/>
+          Physics simulators have shown great promise for conveniently learning reinforcement learning policies in safe, unconstrained environments. However, transferring the acquired knowledge to the real world can be challenging due to the reality gap. To this end, several methods have been recently proposed to automatically tune simulator parameters with posterior distributions given real data, for use with domain randomization at training time. These approaches have been shown to work for various robotic tasks under different settings and assumptions. Nevertheless, existing literature lacks a thorough comparison of existing adaptive domain randomization methods with respect to transfer performance and real-data efficiency. In this work, we present an open benchmark for both offline and online methods (SimOpt, BayRn, DROID, DROPO), to shed light on which are most suitable for each setting and task at hand. We found that online methods are limited by the quality of the currently learned policy for the next iteration, while offline methods may sometimes fail when replaying trajectories in simulation with open-loop commands.
+        </p>
+        <br/>
+        <p style="font-style: italic;">Authored by <a href="https://gabrieletiboni.com/" target="_blank" class="easyLink">Gabriele Tiboni</a>, <a href="https://scholar.google.com/citations?user=yBxCckoAAAAJ&hl=en" target="_blank" class="easyLink">Karol Arndt</a>, <a href="https://scholar.google.com/citations?hl=en&user=i4rm0tYAAAAJ" target="_blank" class="easyLink">Giuseppe Averta</a>, <a href="https://scholar.google.com/citations?hl=en&user=8OBnyXQAAAAJ" target="_blank" class="easyLink">Ville Kyrki</a>, <a href="http://www.tatianatommasi.com/" target="_blank" class="easyLink">Tatiana Tammasi</a>.
+        </p>
+      </div>
+
+      <div id="introImg">
+        <span>
+          <img src="assets/img/benchmark_overview.png">
+        </span>
+        <span>
+          Overview of tasks, methods and dynamics settings used in this benchmark.<br/>
+          *The source domain is under-modeled in the dynamics space.
+        </span>
+      </div>
+
+      <div class="tab" id="contributionsSection">
+        <h2>Contributions</h2>
+
+        <p class="comingSoon">
+          Coming Soon
+        </p>
+      </div>
+
+      <div class="tab" id="findingsSection">
+          <h2>Primary findings</h2>
+          <div class="main-list">
+            <span>
+              <span class="index">#1</span>
+              <span class="content">
+                <span class="title">
+                  Offline methods are more data efficient
+                </span>
+                <span class="descr">
+                  Offline methods often reached the same long-term performance as online methods with as
+                  little as a single real trajectory. This wasn't necessarily true for DROID due to finding #4.
+                </span>
+              </span>
+            </span>
+            <span>
+              <span class="index">#2</span>
+              <span class="content">
+                <span class="title">
+                  Bayesian Optimization does not scale to high-dimensional tasks
+                </span>
+                <span class="descr">
+                 While successfully solving the Hopper task, Bayesian optimization (BayRN) would not scale to high-dimensional inference tasks with only 5 iterations. Such tasks include Half Cheetah, Walker2D and Humanoid which require inference of posterior distributions over 8, 13 and 30 dynamics parameters respectively.  
+                </span>
+              </span>
+              
+            </span>
+            <span>
+              <span class="index">#3</span>
+              <span class="content">
+                <span class="title">
+                  Online methods may fail unexpectedly due to bad intermediate policies
+                </span>
+                <span class="descr">
+                  Online methods such as BayRN and SimOpt may fail unexpectedly when policies learned at intermediate iterations fail to transfer to the target domain and do not collect informative data for inferring the desired dynamics parameters. This phenomenon occurred more frequently in complex tasks, e.g. Humanoid.
+                </span>
+              </span>
+            </span>
+            <span>
+              <span class="index">#4</span>
+              <span class="content">
+                <span class="title">
+                  Offline methods may fail when replaying offline commands in simulation 
+                </span>
+                <span class="descr">
+                  Offline methods would sometimes produce meaningless results when real-world commands are replayed in simulation (open loop) on missmatched dynamics, leading to divergent trajectories.<br/>
+                  Resetting the simulator state to each individual starting state when replaying offline trajectories—as in DROPO—seemed to solve the issue completely.
+                </span>
+              </span>
+            </span>
+          </div> 
+      </div>
+
+      <!-- <div class="tab">
+          <h2>Conclusions</h2>
+          <p class="comingSoon">
+            Coming Soon
+          </p>
+      </div> -->
+
+      <div class="tab">
+          <h2>Citing</h2>
+          <p class="comingSoon">
+            Coming Soon
+          </p>
+      </div>
+    </section>
+
+    <footer>
+      If you have any questions, please contact us at <a href="mailto:gabriele.tiboni@polito.it" class="easyLink">gabriele.tiboni@polito.it</a>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+      const init_brad = 35;
+      $('#headerBackground').css("border-radius", init_brad+"%");
+      $('#animContainer').css("border-radius", init_brad+"%");
+      
+
+      function init() {
+        loadAnimatedBackground();
+
+        $('body').on('scroll', function() {
+          var scroll = $('body').scrollTop();
+          var viewportHeight = $(window).height();  // get viewport height
+
+          // max_brad = 35;
+          new_brad = init_brad - ((init_brad/viewportHeight) * scroll)
+          if (scroll <= viewportHeight) {
+            $("#headerBackground").css("border-radius", new_brad+"%");
+            $('#animContainer').css("border-radius", new_brad+"%");
+          }
+        });
+      }
+
+      //scroll to div
+      $('a[href^="#"]').on('click', function(event) {
+
+          var target = $( $(this).attr('href') );
+
+          if( target.length ) {
+              event.preventDefault();
+              $('html, body').animate({
+                  scrollTop: target.offset().top - 30
+              }, 600);
+          }
+
+      });
+
+
+      function loadAnimatedBackground() {
+        $("#animContainer").load("assets/include/animatedBackground.html"); 
+      }
+
+      init();
+
+      
+    </script>
+  </body>
+</html>
