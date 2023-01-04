@@ -18,12 +18,15 @@ Our release is **under construction**, you can track its progress below:
 ## Cite us
 If you use this repository, please consider citing
 ```
-@misc{tiboniadrbenchmark,
-    title={Online vs. Offline Adaptive Domain Randomization Benchmark},
-    author={Tiboni, Gabriele and Arndt, Karol and Averta, Giuseppe and Kyrki, Ville and Tommasi, Tatiana},
-    year={2022},
-    primaryClass={cs.RO},
-    publisher={arXiv},
-    doi={10.48550/ARXIV.2206.14661}
+@InProceedings{tiboniadrbenchmark,
+    author="Tiboni, Gabriele and Arndt, Karol and Averta, Giuseppe and Kyrki, Ville and Tommasi, Tatiana",
+    editor="Borja, Pablo and Della Santina, Cosimo and Peternel, Luka and Torta, Elena",
+    title="Online vs. Offline Adaptive Domain Randomization Benchmark",
+    booktitle="Human-Friendly Robotics 2022",
+    year="2023",
+    publisher="Springer International Publishing",
+    address="Cham",
+    pages="158--173",
+    isbn="978-3-031-22731-8"
 }
 ```
