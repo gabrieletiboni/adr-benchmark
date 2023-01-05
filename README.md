@@ -1,4 +1,7 @@
 # Online vs. Offline Adaptive Domain Randomization Benchmark
+
+[website](https://gabrieletiboni.github.io/adr-benchmark/)  /  [video](https://gabrieletiboni.github.io/adr-benchmark/)
+
 ##### Gabriele Tiboni, Karol Arndt, Giuseppe Averta, Ville Kyrki, Tatiana Tommasi.
 
 This repository contains the code for the [paper](https://arxiv.org/abs/2206.14661) "Online vs. Offline Adaptive Domain Randomization Benchmark", published in the Springer Proceedings in Advanced Robotics 2022.
