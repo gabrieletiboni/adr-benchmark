@@ -324,6 +324,11 @@ header {
 		color: rgb(36, 41, 47);
 	}
 
+	.easyUl {
+		/*padding: 0;*/
+		margin: 0;
+	}
+
 
 footer {
 	width: 90%;
@@ -341,4 +346,51 @@ footer {
 	#linksContainer a {
 		margin-bottom: 12px;
 	}
+
+	header {
+		padding-bottom: 0px;
+	}
+
+	#videoContainer {
+		position: relative;
+		bottom: 0px;
+		/*margin-top: 40px;*/
+
+		-webkit-transform: translateY(30%);
+		   -moz-transform: translateY(30%);
+		    -ms-transform: translateY(30%);
+		     -o-transform: translateY(30%);
+		        transform: translateY(30%);
+	}
+
+	#headerBackground {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+
+		width: 100%;
+		height: 100%;
+
+		z-index: 10;
+		-webkit-border-radius: 0px!important;
+		-moz-border-radius: 0px!important;
+		border-radius: 0px!important;
+	}
+
+	#main {
+		font-size: 1rem;
+	}
+
+	.tab h2 {
+		-webkit-transform: translateX(36px);
+		   -moz-transform: translateX(36px);
+		    -ms-transform: translateX(36px);
+		     -o-transform: translateX(36px);
+		        transform: translateX(36px);
+	}
+
+
 }

@@ -22,7 +22,7 @@
         <div id="linksContainer">
           <a href="https://arxiv.org/abs/2206.14661" target="_blank" class="iconLink">Paper <img src="assets/img/paper_icon2_64px.png"/></a>
           <a href="https://github.com/gabrieletiboni/adr-benchmark" target="_blank" class="iconLink">Code <img src="assets/img/github_logo_light_64px.png"/></a>
-          <a href="#contributionsSection">Contributions</a>
+          <!-- <a href="#contributionsSection">Contributions</a> -->
           <a href="#findingsSection">Findings</a>
         </div>
       </div>
@@ -30,7 +30,7 @@
       <div id="videoContainer">
         <div>
           <video controls>
-            <source src="assets/video/adr_benchmark_video.mp4" type="video/mp4">
+            <source src="assets/video/video_adrbenchmark_overview.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
@@ -58,16 +58,20 @@
         </span>
       </div>
 
-      <div class="tab" id="contributionsSection">
+      <!-- <div class="tab" id="contributionsSection">
         <h2>Contributions</h2>
-
+        <ul class="easyUl">
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+        </ul>
         <p class="comingSoon">
           Coming Soon
         </p>
-      </div>
+      </div> -->
 
       <div class="tab" id="findingsSection">
-          <h2>Primary findings</h2>
+          <h2>Findings</h2>
           <div class="main-list">
             <span>
               <span class="index">#1</span>
@@ -159,22 +163,28 @@
       const init_brad = 35;
       $('#headerBackground').css("border-radius", init_brad+"%");
       $('#animContainer').css("border-radius", init_brad+"%");
+
+      // check if viewport is mobile or desktop
+      const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+      const isTablet = window.matchMedia("only screen and (max-width: 1024px)").matches;
       
 
       function init() {
         loadAnimatedBackground();
 
-        $('body').on('scroll', function() {
-          var scroll = $('body').scrollTop();
-          var viewportHeight = $(window).height();  // get viewport height
+        if (!isMobile && !isTablet) {
+          $('body').on('scroll', function() {
+            var scroll = $('body').scrollTop();
+            var viewportHeight = $(window).height();  // get viewport height
 
-          // max_brad = 35;
-          new_brad = init_brad - ((init_brad/viewportHeight) * scroll)
-          if (scroll <= viewportHeight) {
-            $("#headerBackground").css("border-radius", new_brad+"%");
-            $('#animContainer').css("border-radius", new_brad+"%");
-          }
-        });
+            // max_brad = 35;
+            new_brad = init_brad - ((init_brad/viewportHeight) * scroll)
+            if (scroll <= viewportHeight) {
+              $("#headerBackground").css("border-radius", new_brad+"%");
+              $('#animContainer').css("border-radius", new_brad+"%");
+            }
+          });
+        }
       }
 
       //scroll to div
