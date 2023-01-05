@@ -195,7 +195,8 @@
           if( target.length ) {
               event.preventDefault();
               $('html, body').animate({
-                  scrollTop: target.offset().top - 30
+                  // scrollTop: target.offset().top - 30
+                  scrollTop: target.offset().top+$('body').scrollTop()-10
               }, 600);
           }
 
