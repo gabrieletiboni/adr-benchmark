@@ -1,6 +1,6 @@
 # Online vs. Offline Adaptive Domain Randomization Benchmark
 
-[Paper](https://arxiv.org/abs/2206.14661) / [Website](https://gabrieletiboni.github.io/adr-benchmark/) / [Video](https://gabrieletiboni.github.io/adr-benchmark/)
+[Paper](https://link.springer.com/chapter/10.1007/978-3-031-22731-8_12) / [Preprint](https://arxiv.org/abs/2206.14661) / [Website](https://gabrieletiboni.github.io/adr-benchmark/) / [Video](https://gabrieletiboni.github.io/adr-benchmark/)
 
 ##### Gabriele Tiboni, Karol Arndt, Giuseppe Averta, Ville Kyrki, Tatiana Tommasi.
 
